@@ -51,16 +51,19 @@ export default {
     });
 
 console.log(res.data)
+const tipo = res.data.tipo?.toLowerCase().trim()
 
 localStorage.setItem("token", res.data.token);
-localStorage.setItem("tipo", res.data.tipo);
-localStorage.setItem("usuarioId", res.data.usuarioId)
+localStorage.setItem("tipo", tipo);
+localStorage.setItem("usuarioId", res.data.usuarioId);
 
-if (res.data.tipo === "paciente") {
+if (tipo === "paciente") {
   this.$router.push("/dashboard-paciente");
-} else {
+} else if (tipo === "secretario") {
   this.$router.push("/dashboard-secretario");
-
+} else {
+  console.log("Tipo desconhecido:", tipo)
+  this.erroMensagem = "Tipo de usuário inválido";
 }
 
 
