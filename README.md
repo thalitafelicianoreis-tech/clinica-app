@@ -14,6 +14,7 @@ Aplicar conceitos de desenvolvimento web utilizando frontend e backend integrado
 - Listagem de consultas
 - Dashboard do secretário
 - Dashboard Paciente
+- Integração com API de clima/tempo
 
 ## 🛠 Tecnologias Utilizadas
 - Vue.js
