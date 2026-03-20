@@ -32,6 +32,8 @@ npm run dev
 ### Backend
 ```bash
 node server.js
+```
+💻 **Acesse o projeto online:** [clinica-frontend](https://clinica-frontend-lime.vercel.app)
 
 
 
