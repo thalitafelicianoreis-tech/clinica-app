@@ -1,4 +1,4 @@
-const Consulta = require("../models/consulta")
+const Consulta = require("../models/Consulta")
 
 exports.agendarConsulta = async (req,res)=>{
 
