@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
@@ -18,7 +19,9 @@ app.use("/cep", cepRoutes)
 app.use("/consultas", consultaRoutes)
 app.use("/clima", climaRoutes)
 
-mongoose.connect("mongodb://localhost:27017/clinica")
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/clinica";
+
+mongoose.connect(mongoURI)
 .then(() => console.log("✅ Conectado ao MongoDB com sucesso!"))
 .catch((err) => console.error("❌ Erro ao conectar ao MongoDB:", err));
 
@@ -26,11 +29,8 @@ app.get("/", (req,res)=>{
 res.send("API da clínica funcionando")
    
 }) 
-
-app.listen(3000, ()=>{
-    console.log("Servidor rodando na porta 3000 http://localhost:3000")
-})
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
 
 
 
