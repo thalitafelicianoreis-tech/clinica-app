@@ -11,7 +11,7 @@ exports.register = async (req, res) => {
     });
   }
 
-  const { nome, email, senha, confirmSenha, tipo } = result.data;
+  const { nome, email, senha, tipo } = result.data;
 
   const senhaHash = await bcrypt.hash(senha, 10);
 
