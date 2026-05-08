@@ -6,7 +6,7 @@ const { registerSchema } = require("../validator/validators");
 exports.register = async (req, res) => {
   const result = registerSchema.safeParse(req.body);
   if (!result.success) {
-    return res(422).json({
+    return res.status(422).json({
       message: result.error.issues[0].message,
     });
   }
