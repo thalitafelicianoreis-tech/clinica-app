@@ -1,17 +1,9 @@
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { registerSchema } = require("../validator/validators");
 
 exports.register = async (req, res) => {
-  const result = registerSchema.safeParse(req.body);
-  if (!result.success) {
-    return res.status(422).json({
-      message: result.error.issues[0].message,
-    });
-  }
-
-  const { nome, email, senha, tipo } = result.data;
+  const { nome, email, senha, tipo } = req.body;
 
   const senhaHash = await bcrypt.hash(senha, 10);
 
