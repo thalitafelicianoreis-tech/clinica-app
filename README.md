@@ -1,13 +1,13 @@
 # 🏥 Sistema de Agendamento de Consultas
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 Este projeto foi desenvolvido com o objetivo de gerenciar consultas médicas, 
 permitindo o cadastro de usuários, login, agendamento e visualização de consultas.
 
-## 🎯 Objetivo
+## Objetivo
 Aplicar conceitos de desenvolvimento web utilizando frontend e backend integrados.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 - Cadastro de usuários
 - Login
 - Agendamento de consultas
@@ -16,12 +16,12 @@ Aplicar conceitos de desenvolvimento web utilizando frontend e backend integrado
 - Dashboard Paciente
 - Integração com API de clima/tempo
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Vue.js
 - Node.js
 - MongoDB
 
-## ▶️ Como Executar o Projeto
+## Como Executar o Projeto
 
 ### Frontend
 ```bash
@@ -33,7 +33,7 @@ npm run dev
 ```bash
 node server.js
 ```
-💻 **Acesse o projeto online:** [clinica-frontend](https://clinica-frontend-lime.vercel.app)
+
 
 
 
