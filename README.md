@@ -1,4 +1,4 @@
-# 🏥 Sistema de Agendamento de Consultas
+# Sistema de Agendamento de Consultas
 
 ## Sobre o Projeto
 Este projeto foi desenvolvido com o objetivo de gerenciar consultas médicas, 
